@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <form novalidate [formGroup]="klientForm" (ngSubmit)="onSubmit()">
+          <fieldset>
+            <div class="form-group">
+              <label>Imie</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="imie">
+            </div>
+
+            <div class="form-group">
+              <label>Nazwisko</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="nazwisko">
+            </div>
+
+
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email"
+                     class="form-control"
+                     formControlName="email">
+            </div>
+
+            <div class="form-group">
+              <label>Data Dołączenia</label>
+              <input type="date"
+                     class="form-control"
+                     formControlName="joinDate">
+            </div>
+
+            <div class="form-group">
+              <label>Członkostwo</label>
+              <input type="checkbox"
+                     class="form-control"
+                     formControlName="czlonkostwo">
+            </div>
+            <div class="form-group">
+              <label>Pakiet</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="pakiet">
+            </div>
+
+            <div class="form-group">
+              <label>Silownia</label>
+              <br>
+              <select [(ngModel)] = "selectedSilownia" class="form-control" formControlName="silownia">
+                <option *ngFor="let silownia of silownie" [ngValue]="silownia">{{silownia.silownialocal}}
+                </option>
+              </select >
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn-primary" [disabled]="!klientForm.valid">Submit</button>
+          <pre>{{klientForm.value | json}}</pre>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
