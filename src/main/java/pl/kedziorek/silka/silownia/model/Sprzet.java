@@ -28,6 +28,6 @@ public class Sprzet {
     private int sprzetStatus;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "SILOWNIA ID")
+    @JoinColumn(name = "SILOWNIAID")
     private Silownia silownia;
 }

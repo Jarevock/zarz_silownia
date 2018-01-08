@@ -1,6 +1,7 @@
 package pl.kedziorek.silka.silownia.controler;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +21,8 @@ public class SilowniaControler {
     private SilowniaService silowniaService;
 
 
-    @GetMapping("/znajdzSilownie")
+    //@GetMapping(value = "/znajdzSilownie", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/znajdzSilownie")
     public List<Silownia> znajdzSilownie(){
         List<Silownia> silownias = silowniaService.findAll();
        return silownias;

@@ -11,6 +11,8 @@ export class KlientService {
 
   private apiUrl = "http://localhost:8080/dodajKlienta"
   private apiUrlSilownia = "http://localhost:8080/znajdzSilownie"
+  private apiUrlKlient = "http://localhost:8080/znajdzKlientow"
+  private apiUrlKlientUsun = "http://localhost:8080/usunKlienta"
 
   constructor(private http: Http) { }
 
@@ -19,10 +21,23 @@ export class KlientService {
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
 
-pobierzSilownie(): Observable<Silownia[]>{
+  deleteKlient(id: number): Observable<boolean>{
+    return this.http.delete(this.apiUrlKlientUsun + '/' + id)
+      .map((res: Response) => res.json())
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
+  pobierzSilownie(): Observable<Silownia[]> {
   return this.http.get(this.apiUrlSilownia)
-    .map((res:Response) => res.json())
-    .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
-}
+    .map((res: Response) => res.json())
+    .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+  }
+  pobierzKlientow(): Observable<Klient[]>{
+    return this.http.get(this.apiUrlKlient)
+      .map((res:Response) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+
+
+  }
 
 }

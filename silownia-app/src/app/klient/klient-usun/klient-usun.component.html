@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <header class="header">
+          <div class="row">
+            <div class="col-md-4">
+              <h1>Klienci</h1>
+            </div>
+          </div>
+        </header>
+      </section>
+
+      <section class="main">
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Imie</th>
+            <th>Nazwisko</th>
+            <th>email</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let klient of klienci">
+            <th scope="row">{{klient.klientId}}</th>
+            <td>{{klient.klientImie}}</td>
+            <td>{{klient.klientNazwisko}}</td>
+            <td>{{klient.klientEmail}}</td>
+            <td>
+              <button type="button" class="btn btn-danger" (click)="deleteKlient(klient.klientId)">Delete</button>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>

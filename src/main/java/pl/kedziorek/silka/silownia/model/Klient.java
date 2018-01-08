@@ -16,9 +16,9 @@ public class Klient {
 
 
     @Id
-    @Column(name ="ID")
+    @Column(name ="KLIENTID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long klientId;
+    private Long klientId;
 
     @Column(name ="IMIE")
     private String klientImie;
@@ -29,16 +29,13 @@ public class Klient {
     @Column(name ="EMAIL")
     private String klientEmail;
 
-    @Column(name ="DATA DOLACZENIA")
-    private Date klientData;
-
     @Column(name ="CZLONKOSTWO")
     private Boolean klientCzlonkostwo;
 
     @Column(name ="PAKIET")
-    private int klientPakiet;
+    private Integer klientPakiet;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "SILOWNIA ID")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "SILOWNIAID")
     private Silownia silownia;
 }

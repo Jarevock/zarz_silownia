@@ -13,14 +13,11 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Silownia {
     @Id
-    @Column(name ="ID")
+    @Column(name ="SILOWNIAID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long silowniaID;
+    private Long silowniaID;
 
     @Column(name ="LOKALIZACJA")
-    private int silownialocal;
-
-    @Column(name ="SIZE")
-    private int silowniasize;
+    private Integer silownialocal;
 }
 

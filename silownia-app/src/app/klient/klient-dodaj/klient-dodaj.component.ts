@@ -17,7 +17,8 @@ export class KlientDodajComponent implements OnInit {
   silownie: Silownia[];
 
   constructor(private klientService: KlientService,
-              private router: Router) { }
+              private router: Router) {
+  }
 
   ngOnInit() {
     this.getAllSilownie();
@@ -32,21 +33,25 @@ export class KlientDodajComponent implements OnInit {
     });
   }
 
-  onSubmit(){
-    if(this.klientForm.valid){
-      let klient: Klient = new Klient (
+  onSubmit() {
+    if (this.klientForm.valid) {
+      let klient: Klient = new Klient(
         null,
         this.klientForm.controls['imie'].value,
-        this.klientForm.controls['nazwiksko'].value,
-        this.klientForm.controls['emial'].value,
-        this.klientForm.controls['silownia'].value, null, null, null
+        this.klientForm.controls['nazwisko'].value,
+        this.klientForm.controls['email'].value,
+        this.klientForm.controls['joinDate'].value,
+        this.klientForm.controls['czlonkostwo'].value,
+        this.klientForm.controls['pakiet'].value,
+        this.klientForm.controls['silownia'].value
       );
       this.klientService.dodajKlient(klient).subscribe();
       this.klientForm.reset();
       this.router.navigate(['/']);
     }
   }
-  getAllSilownie(){
+
+  getAllSilownie() {
     this.klientService.pobierzSilownie().subscribe(
       r => {
         this.silownie = r;
@@ -56,5 +61,5 @@ export class KlientDodajComponent implements OnInit {
       }
     );
   }
-
 }
+

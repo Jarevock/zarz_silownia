@@ -1,5 +1,8 @@
-INSERT INTO silownia (id, lokalizacja, size) VALUES
-  (1, 1, 2),
-  (2, 1, 3),
-  (3, 2, 4),
-  (4, 2, 4);
+INSERT INTO silownia (SILOWNIAID, LOKALIZACJA) VALUES
+(1, 2),(2, 1),(4, 2);
+
+INSERT INTO KLIENT (KLIENTID, IMIE, NAZWISKO, EMAIL, CZLONKOSTWO, PAKIET, SILOWNIAID) VALUES
+(1, 'Jaroslaw','Kedziorek','jakistam@gmail.com',TRUE,2,1);
+
+
+

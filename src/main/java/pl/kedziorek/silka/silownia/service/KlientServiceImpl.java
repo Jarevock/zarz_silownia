@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import pl.kedziorek.silka.silownia.model.Klient;
 import pl.kedziorek.silka.silownia.repository.KlientRepository;
 
+import java.util.List;
+
 @Service
 public class KlientServiceImpl implements KlientService{
 
@@ -20,5 +22,11 @@ public class KlientServiceImpl implements KlientService{
     @Override
     public void usunKlienta(Long id) {
         klientRepository.delete(id);
+    }
+
+    @Override
+    public List<Klient> findAll()
+    {
+       return klientRepository.findAll();
     }
 }
