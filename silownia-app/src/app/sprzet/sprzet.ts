@@ -1,4 +1,4 @@
-import {Silownia} from "./silownia";
+import {Silownia} from "../silownia/silownia";
 
 export class Sprzet {
   sprzetId: number;

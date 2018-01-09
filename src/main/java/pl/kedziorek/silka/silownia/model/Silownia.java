@@ -18,6 +18,6 @@ public class Silownia {
     private Long silowniaID;
 
     @Column(name ="LOKALIZACJA")
-    private Integer silownialocal;
+    private String silownialocal;
 }
 

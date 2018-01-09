@@ -18,4 +18,18 @@ public class SilowniaServiceImpl implements SilowniaService {
         return silowniaRepository.findAll();
     }
 
+    @Override
+    public Silownia dodajSilownia(Silownia silownia)
+    {
+        return silowniaRepository.save(silownia);
+    }
+
+    @Override
+    public void usunSilownia(Long id)
+    {
+        silowniaRepository.delete(id);
+    }
+
+
+
 }

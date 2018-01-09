@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <header class="header">
+          <div class="row">
+            <div class="col-md-4">
+              <h1>Silownie</h1>
+            </div>
+          </div>
+        </header>
+      </section>
+
+      <section class="main">
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Lokalizacja</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let silownia of silownie">
+            <th scope="row">{{silownia.silowniaID}}</th>
+            <td>{{silownia.silownialocal}}</td>
+            <td>
+              <button type="button" class="btn btn-danger" (click)="deleteSilownia(silownia.silowniaID)">Delete</button>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>

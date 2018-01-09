@@ -32,13 +32,12 @@
               <label>Silownia:</label>
               <br>
               <select [(ngModel)] = "selectedSilownia" class="form-control" formControlName="silownia">
-                <option *ngFor="let silownia of silownie" [ngValue]="silownia">{{silownia.silowniaID}}
+                <option *ngFor="let silownia of silownie" [ngValue]="silownia">{{silownia.silownialocal}}
                 </option>
               </select >
             </div>
           </fieldset>
           <button type="submit" class="btn btn-primary" [disabled]="!sprzetForm.valid">Submit</button>
-          <pre>{{sprzetForm.value | json}}</pre>
         </form>
       </section>
     </div>

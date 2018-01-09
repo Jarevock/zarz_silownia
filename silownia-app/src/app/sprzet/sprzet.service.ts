@@ -4,7 +4,8 @@ import {Observable} from "rxjs/Observable";
 import {Sprzet} from "./sprzet";
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/catch';
-import {Silownia} from "./silownia";
+import {Silownia} from "../silownia/silownia";
+
 
 @Injectable()
 export class SprzetService {

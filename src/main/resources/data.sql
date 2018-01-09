@@ -1,5 +1,5 @@
 INSERT INTO silownia (SILOWNIAID, LOKALIZACJA) VALUES
-(1, 2),(2, 1),(4, 2);
+(1, 'Warszawa'),(2, 'Krakow'),(4, 'Poznan');
 
 INSERT INTO KLIENT (KLIENTID, IMIE, NAZWISKO, EMAIL, CZLONKOSTWO, PAKIET, SILOWNIAID) VALUES
 (1, 'Jaroslaw','Kedziorek','jakistam@gmail.com',TRUE,2,1);

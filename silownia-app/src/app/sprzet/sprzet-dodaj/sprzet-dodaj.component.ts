@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SprzetService} from "../sprzet.service";
 import {Router} from "@angular/router";
-import {Silownia} from "../../klient/silownia";
+import {Silownia} from "../../silownia/silownia";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Sprzet} from "../sprzet";
 

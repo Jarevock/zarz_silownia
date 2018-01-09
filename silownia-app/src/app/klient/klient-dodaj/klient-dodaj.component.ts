@@ -3,7 +3,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {KlientService} from "../klient.service";
 import {Klient} from "../klient";
 import {Router} from "@angular/router";
-import {Silownia} from "../silownia";
+import {Silownia} from "../../silownia/silownia";
 
 @Component({
   selector: 'app-klient-dodaj',
