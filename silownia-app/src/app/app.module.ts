@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {KlientModule} from "./klient/klient.module";
 import {HttpModule} from "@angular/http";
+import {SprzetModule} from "./sprzet/sprzet.module";
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import {HttpModule} from "@angular/http";
     BrowserModule,
     AppRoutingModule,
     KlientModule,
+    SprzetModule,
     HttpModule
   ],
   providers: [],

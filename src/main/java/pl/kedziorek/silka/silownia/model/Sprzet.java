@@ -22,12 +22,12 @@ public class Sprzet {
     private String sprzetNazwa;
 
     @Column(name ="KATEGORIA")
-    private int sprzetKategoria;
+    private Integer sprzetKategoria;
 
     @Column(name ="STATUS")
-    private int sprzetStatus;
+    private Integer sprzetStatus;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "SILOWNIAID")
     private Silownia silownia;
 }

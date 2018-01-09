@@ -10,7 +10,7 @@ export class Klient {
   klientPakiet: number;
   silownia: Silownia;
 
-  constructor(klientId: number, klientImie: string, klientNazwisko: string, klientEmail: string, klientData: Date, klientCzlonkostwo: boolean, klientPakiet: number, silownia: Silownia,){
+  constructor(klientId: number, klientImie: string, klientNazwisko: string, klientEmail: string, klientData: Date, klientCzlonkostwo: boolean, klientPakiet: number, silownia: Silownia){
     this.klientId = klientId;
     this.klientImie= klientImie;
     this.klientNazwisko= klientNazwisko;
