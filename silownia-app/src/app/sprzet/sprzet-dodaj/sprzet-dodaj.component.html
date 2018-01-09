@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Dodawanie sprzetu</h2>
+
+      <section>
+        <form novalidate [formGroup]="sprzetForm" (ngSubmit)="onSubmit()">
+          <fieldset>
+            <div class="form-group">
+              <label>Nazwa:</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="nazwa">
+            </div>
+
+            <div class="form-group">
+              <label>Kategoria:</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="kategoria">
+            </div>
+
+
+            <div class="form-group">
+              <label>Status:</label>
+              <input type="email"
+                     class="form-control"
+                     formControlName="status">
+            </div>
+
+            <div class="form-group">
+              <label>Silownia:</label>
+              <br>
+              <select [(ngModel)] = "selectedSilownia" class="form-control" formControlName="silownia">
+                <option *ngFor="let silownia of silownie" [ngValue]="silownia">{{silownia.silowniaID}}
+                </option>
+              </select >
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn-primary" [disabled]="!sprzetForm.valid">Submit</button>
+          <pre>{{sprzetForm.value | json}}</pre>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>

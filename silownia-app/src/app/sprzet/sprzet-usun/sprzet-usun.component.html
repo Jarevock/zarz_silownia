@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <header class="header">
+          <div class="row">
+            <div class="col-md-4">
+              <h1>Sprzet</h1>
+            </div>
+          </div>
+        </header>
+      </section>
+
+      <section class="main">
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Nazwa</th>
+            <th>Kategoria</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let sprzet of sprzets">
+            <th scope="row">{{sprzet.sprzetId}}</th>
+            <td>{{sprzet.sprzetNazwa}}</td>
+            <td>{{sprzet.sprzetKategoria}}</td>
+            <td>{{sprzet.sprzetStatus}}</td>
+            <td>
+              <button type="button" class="btn btn-danger" (click)="deleteSprzet(sprzet.sprzetId)">Delete</button>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>
